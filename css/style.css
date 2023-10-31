@@ -1,0 +1,425 @@
+/* General styling  */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: rgb(51, 52, 52);
+  --bg-light: rgb(187, 213, 255);
+}
+
+header h1 {
+  font-size: 40px;
+}
+
+.h2-text-block h2 {
+  font-weight: 500px;
+  color: var(--bg-dark);
+}
+
+
+h3 {
+  font-size: 25px;
+  color: var(--bg-dark);
+}
+
+html {
+  background-color: var(--bg-light);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.page-wrapper {
+  max-width: 80%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+/* Navigation bar */
+
+.topnav {
+  display: flex;
+  background-color: var(--bg-dark);
+  padding: 10px;
+}
+
+/* Navigation bar name on left  */
+
+.name {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-light);
+  color: rgb(47, 47, 47);
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* Navigation links */
+
+.nav-links {
+  color: var(--bg-light);
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+  height: 50px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: auto;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.item {
+  display: block;
+  padding: 15px 5px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: var(--bg-light);
+  color: var(--bg-dark);
+}
+
+
+/* add background design element to top  */
+
+.hero-banner {
+  height: 150px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url("../images/02-hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.75;
+}
+
+#h2-text-block {
+  position: absolute;
+  top: 180px;
+  right: 40px;
+  background-color: var(--bg-light);
+  color: var(--bg-dark);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* change color and remove underline of header links  */
+li a {
+  color: var(--bg-light);
+  text-decoration: none;
+}
+
+li {
+  border-bottom: 3px solid var(--bg-light);
+}
+
+/* grid for about me section  */
+
+#about {
+  display: grid;
+  grid-template-rows: 2fr 2fr 1fr;
+  grid-template-columns: 150px 10px 1fr;
+  grid-gap: 10px;
+  grid-template-areas:
+    "about-header border-line about-p"
+    "headshot-pic border-line about-p";
+}
+
+.about-head {
+  grid-area: about-header;
+}
+
+.border-column {
+  grid-area: border-line;
+  border-right: 6px solid var(--bg-dark);
+}
+
+.about-text {
+  grid-area: about-p;
+}
+
+.headshot {
+  grid-area: headshot-pic;
+  background-image: url("../images/Adam-riley_headshot.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* grid for Work secion */
+
+#work-grid {
+  display: grid;
+  grid-template-rows: 400px 200px 200px;
+  grid-template-columns: 150px 10px 1fr 1fr;
+  grid-gap: 10px;
+  margin-bottom: 50px;
+  grid-template-areas:
+    "work-header border-line portfolio1 portfolio1"
+    "work-header border-line portfolio2 portfolio3"
+    "work-header border-line portfolio4 portfolio5";
+}
+
+.work-head {
+  grid-area: work-header;
+}
+
+/* titles for work items */
+
+.portfolio-header {
+  background-color: var(--bg-dark);
+  padding: 35px;
+  position: relative;
+  top: 100px;
+  right: -10px;
+  color: white;
+  border: 5px solid var(--bg-light);
+}
+
+/* portfolio images   */
+
+.portfolio-1 {
+  grid-area: portfolio1;
+  background-image: url("../images/Portfolio-item-1.png");
+  border: 3px solid var(--bg-dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.portfolio-2 {
+  grid-area: portfolio2;
+  background-image: url("../images/Portfolio-item-2.png");
+  border: 3px solid var(--bg-dark);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.portfolio-3 {
+  grid-area: portfolio3;
+  background-image: url("../images/Portfolio-item-3.png");
+  border: 3px solid var(--bg-dark);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.portfolio-4 {
+  grid-area: portfolio4;
+  background-image: url("../images/Portfolio-item-4.png");
+  background-repeat: no-repeat;
+  border: 3px solid var(--bg-dark);
+  background-size: cover;
+}
+
+.portfolio-5 {
+  grid-area: portfolio5;
+  border: 3px solid var(--bg-dark);
+  background-image: url("../images/Portfolio-item-5.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/* Grid for contact section */
+
+#contact {
+  display: grid;
+  grid-template-rows: 1fr;
+  font-size: 20px;
+  grid-template-columns: 150px 10px 1fr 1fr 1fr 1fr;
+  justify-items:center ;
+  color: var(--bg-dark);
+  grid-template-areas: "contactheader border-line phonenumber email linkedin github";
+}
+
+#contact a {
+  color: var(--bg-dark);
+}
+
+.contactme {
+  grid-area: contactheader;
+
+}
+
+.phone {
+  grid-area: phonenumber;
+  border-bottom: 3px solid var(--bg-dark);
+}
+
+.email {
+  grid-area: email;
+  border-bottom: 3px solid var(--bg-dark);
+}
+
+.linkedin {
+  grid-area: linkedin;
+  border-bottom: 3px solid var(--bg-dark);
+}
+
+.github {
+  grid-area: github;
+  border-bottom: 3px solid var(--bg-dark);
+}
+
+/* Media queries  */
+
+/* 600px max width for mobile devices */
+
+@media only screen and (max-width: 600px) {
+
+  .name {
+    flex-wrap: nowrap;
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-wrap: nowrap;
+    font-size: 15px;
+  }
+
+  .about-head, .work-head, .contactme {
+    font-size: 20px;
+  }
+
+  #about {
+    display: grid;
+    grid-template-rows: 2fr 2fr 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 2px;
+    grid-template-areas:
+      "about-header"
+      "about-p"
+      "headshot-pic";
+  }
+
+  .about-text {
+    margin-top: -30px;
+  }
+
+  /* .work-head {
+font-size: 20px;
+    
+  } */
+  #work-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+      "work-header"
+      "portfolio1"
+      "portfolio1"
+      "portfolio2"
+      "portfolio3";
+  }
+
+  .portfolio-header {
+    background-color: var(--bg-dark);
+    size: 12px;
+    padding: 3px;
+    border: 2px solid var(--bg-light);
+    justify-content: center;
+  top: 50px;
+  right: -10px;
+  }
+
+  #contact {
+    display: grid;
+    grid-gap: 40px;
+    color: var(--bg-dark);
+    grid-template-rows: 1fr 1fr 1fr;
+    font-size: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "contactheader contactheader"
+      "phonenumber email"
+      "linkedin github";
+  }
+#contact a {
+  font-size: 15px;
+}
+
+}
+
+
+/* 1100px max width */
+
+@media only screen and (max-width: 1100px) {
+  .name {
+    flex-wrap: nowrap;
+    height: 100px;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-wrap: nowrap;
+
+  }
+
+  #h2-text-block {
+     margin-top: 40px;
+  }
+  #about {
+    display: grid;
+    grid-template-rows: 1fr 5fr 2fr;
+    grid-template-columns: 1fr;
+    grid-gap: 2px;
+    
+    grid-template-areas:
+      "about-header"
+      "about-p"
+      "headshot-pic";
+  }
+  
+  #work-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+      "work-header"
+      "portfolio1"
+      "portfolio2"
+      "portfolio3"
+      "portfolio4"
+      "portfolio5";
+  }
+
+  .portfolio-header {
+    background-color: var(--bg-dark);
+    size: 12px;
+    padding: 3px;
+    border: 2px solid var(--bg-light);
+    position: relative;
+  top: 50px;
+  right: -10px;
+  }
+
+
+  #contact {
+    display: grid;
+    grid-gap: 40px;
+    color: var(--bg-dark);
+    grid-template-rows: 1fr 1fr 1fr;
+    font-size: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "contactheader contactheader"
+      "phonenumber email"
+      "linkedin github";
+  }
+}
